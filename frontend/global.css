@@ -1,0 +1,280 @@
+
+.moviefinder{
+    position: absolute;
+    left: 41%;
+  
+    top: 8.89%;
+    bottom: 87.16%;
+
+
+}
+
+.title{
+    position: absolute;
+    left: 5.17%;
+    
+    top: 7.7%;
+    bottom: 70.52%;
+    color:white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+body{
+    background-image: url("back.jpg");
+   background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.box{
+    
+   width: 250px;
+   background-color:rgb(226, 233, 235);
+    border: 4px solid rgb(14, 14, 14);
+    padding: 20px;
+    margin: 20px;
+   
+}
+.login{
+    position: absolute;
+    width: 445px;
+    height: 570px;
+    left: 34.5%;
+    right:34.5%;
+    top: 160px;
+    background: rgba(49, 49, 49, 0.95);
+    box-shadow: 0px 6px 6px rgba(11, 11, 11, 0.8);
+    border-radius: 10px;
+}
+
+
+.input1{
+    position: absolute;
+left: 10.58%;
+top: 16.93%;
+width: 355.11px;
+height: 45.19px;
+
+background: #FFFFFF;
+border-radius: 5px;
+}
+.input1::placeholder {
+   position: absolute;
+    opacity: .5;
+    left:2.27%;
+    top:30%;
+    color: #BCBCBC;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+  
+}
+
+.input2{
+position: absolute;
+left: 10.58%;
+top: 25.84%;
+width: 355.11px;
+height: 45.19px;
+
+background: #FFFFFF;
+border-radius: 5px;
+}
+.ellipse{
+
+position: absolute;
+top:28.84%;
+left: 82.5%;
+
+}
+.input2::placeholder {
+    position: absolute;
+     opacity: .5;
+     left:2.27%;
+     top:25%;
+     color: #BCBCBC;
+ }
+
+.span2{
+    position: absolute;
+left: 65.23%;
+
+top: 34.39%;
+
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 32px;
+/* identical to box height, or 320% */
+
+color: #29B9FC;
+
+}
+
+.login-button{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 18px;
+gap: 4px;
+
+position: absolute;
+width: 354px;
+height: 47px;
+left: 10%;
+top: 40.5%;
+
+background: #2791C2;
+border-radius: 31px;
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 20px;
+/* identical to box height, or 133% */
+
+
+/* White */
+
+color: #FFFFFF;
+
+}
+
+.line1{
+    position: absolute;
+width: 142.12px;
+height: 0px;
+left:44.97px;
+top: 330.55px;
+
+border: 1px solid #FFFFFF;
+
+}
+
+
+
+
+.or{
+    position: absolute;
+left: 49.53%;
+right: 49.5%;
+top: 55.90%;
+bottom: 37.78%;
+color:white;
+}
+.line2{
+    position: absolute;
+width: 142.12px;
+height: 0px;
+left:258.33px;
+top: 330.55px;
+
+border: 1px solid #FFFFFF;
+
+}
+
+
+.facebook{
+    width: 358px;
+    height: 46px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 10.58%;
+    background-color: transparent;
+    top: 65.49%;
+    bottom: 30.65%;
+    color:white;
+    font-family: 'Open Sans';
+    font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 32px;
+    border: 1px solid #FFFFFF;
+    border-radius: 35px;
+
+}
+.facebookLogo{
+    position:absolute;
+    top:67%;
+    left:27.5%;
+}
+
+
+
+.twitter{
+    width: 358px;
+    height: 46px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 10.58%;
+    background-color: transparent;
+    top: 75.49%;
+    bottom: 30.65%;
+    color:white;
+    font-family: 'Open Sans';
+    font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 32px;
+    border: 1px solid #FFFFFF;
+    border-radius: 35px;
+
+}
+
+.twitterLogo{
+    position:absolute;
+    top:76.8%;
+    left:27.5%;
+}
+
+.google{
+    width: 358px;
+    height: 46px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 10.58%;
+    background-color: transparent;
+    top: 85.49%;
+    bottom: 30.65%;
+    color:white;
+    font-family: 'Open Sans';
+    font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 32px;
+    border: 1px solid #FFFFFF;
+    border-radius: 35px;
+
+}
+
+.googleLogo{
+    position:absolute;
+    top:87%;
+    left:27.5%;
+}
+
+
+@media only screen and (max-width: 800px) {
+ 
+  
+
+
+
+    .login{
+        position: absolute;
+left: 35.49%;
+right: 35.97%;
+top: 22.45%;
+bottom: 74.87%;
+width: 580px;
+height: 1029px;
+    }
+    
+  }
