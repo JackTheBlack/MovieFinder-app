@@ -4,36 +4,64 @@
         <title>Loging page</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="global.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-     
+        <link rel="stylesheet" href="login.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
+
     </head>
     <body>
-        <img class="moviefinder" src="MOVIEfinder.png" alt="title:MovieFinder">
+
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Some text in the Modal..</p>
+            </div>
+          
+          </div>
+
+
+
+        <img class="moviefinder" src="images/MOVIEfinder.png" alt="title:MovieFinder">
      
-        <div class="login">
-                 <img class="title" src="Title.png" alt="title:MovieFinder">
-
-
-                <input class="input1" placeholder="Email" type="text" />
-                <div class="password">
-                <input class="input2" placeholder="Password" type="password" />
-                <img  class="ellipse" src="ellipse.png" alt="title:MovieFinder">
+        <div class="login-form">
                 
-                <span class="span2">Forgot your password?</span>
-                </div>
+                 <img class="title" src="images/Title.png" alt="title:MovieFinder">
+
               
-                <button class="login-button">Log in</button>
-           
+
+               <div class="inputs">
+                <input id="email" class="input1" placeholder="Email" type="text" />
+                <div class="password">
+                <input id="password" class="input2" placeholder="Password" type="password" />
+                <img id="eye" class="ellipse" src="images/ellipse.png" alt="title:MovieFinder" onfocusin="(email.type='teext')">
+        
+               
+               </div>     
+             
+                </div>
+                <div class="extra-buttons">
+                    <span class="span2">Forgot your password?</span>
+                </div>
+                <div class="login">
+                    <button  id="login-btn" class="login-button">Log in</button>
+                    <span id="error-password"> Error introducing passowrd </span>
+                    <span id="error-email"> Error introducing Email </span>
+                </div>
+
+              
+          
             <div class="line1"></div> <div class="or">or</div> <div class="line2"></div>
 
             <button class="facebook" >Login with facebook   </button>
-            <img class="facebookLogo" src="facebookLogo.png"  alt="facebook logo"/>
+            <img class="facebookLogo" src="images/facebookLogo.png"  alt="facebook logo"/>
             <button class="twitter" >Login with Twitter  </button>
-            <img class="twitterLogo" src="twitterLogo.png"  alt="twitter logo"/>
+            <img class="twitterLogo" src="images/twitterLogo.png"  alt="twitter logo"/>
             <button class="google" >Login with Google   </button>
-            <img class="googleLogo" src="googleLogo.png"  alt="google logo"/>
+            <img class="googleLogo" src="images/googleLogo.png"  alt="google logo"/>
          
         </div>
     </body>
+  
+    <script  type="module" src="login.js"></script>
 </html>

@@ -1,7 +1,7 @@
 
 .moviefinder{
     position: absolute;
-    left: 41%;
+    left: 43%;
   
     top: 8.89%;
     bottom: 87.16%;
@@ -22,12 +22,26 @@
     
 }
 
+
+
+
+
+
+
 body{
-    background-image: url("back.jpg");
-   background-repeat: no-repeat;
+    background-image: url("images/back.jpg");
+
     background-size: cover;
     
 }
+
+
+
+
+
+
+
+
 
 .box{
     
@@ -38,7 +52,7 @@ body{
     margin: 20px;
    
 }
-.login{
+.login-form{
     position: absolute;
     width: 445px;
     height: 570px;
@@ -73,10 +87,15 @@ border-radius: 5px;
   
 }
 
-.input2{
-position: absolute;
+
+.password{
+    position: absolute;
 left: 10.58%;
-top: 25.84%;
+top: 26.84%;
+}
+
+.input2{
+
 width: 355.11px;
 height: 45.19px;
 
@@ -86,9 +105,9 @@ border-radius: 5px;
 .ellipse{
 
 position: absolute;
-top:28.84%;
-left: 82.5%;
-
+top:33.84%;
+left: 90.5%;
+cursor: pointer;
 }
 .input2::placeholder {
     position: absolute;
@@ -113,6 +132,24 @@ line-height: 32px;
 /* identical to box height, or 320% */
 
 color: #29B9FC;
+cursor:pointer;
+
+}
+
+
+.login{
+    
+position: absolute;
+    left: 10%;
+top: 41.5%;
+
+}
+.login span{
+    position:relative;
+    display:none;
+  color:rgb(232, 11, 11);
+  padding-left: 30%;
+  padding-top: 2%;
 
 }
 
@@ -124,11 +161,9 @@ align-items: center;
 padding: 8px 18px;
 gap: 4px;
 
-position: absolute;
 width: 354px;
 height: 47px;
-left: 10%;
-top: 40.5%;
+
 
 background: #2791C2;
 border-radius: 31px;
@@ -139,12 +174,17 @@ font-weight: 700;
 font-size: 15px;
 line-height: 20px;
 /* identical to box height, or 133% */
-
+cursor:pointer;
 
 /* White */
 
 color: #FFFFFF;
 
+}
+
+
+.login-button:hover{
+    background: #04a3f9;
 }
 
 .line1{
@@ -259,6 +299,46 @@ line-height: 32px;
     top:87%;
     left:27.5%;
 }
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 250px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
 
 
 @media only screen and (max-width: 800px) {
