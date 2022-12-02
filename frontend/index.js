@@ -1,81 +1,73 @@
+import { getMostPopular,showMostPopular } from "./functions/popular.js";
+import {getGenres} from "./functions/genres.js";  
+//import {checkLogin} from "./functions/checkLog.js";
+import {logOut} from "./functions/logOut.js";
+import {getList,getMovieList} from "./functions/search.js"
 
 
+//checkLogin()
+
+
+getGenres();
+getMostPopular();
+
+var columns=document.getElementById("columns");
+var rows=document.getElementById("rows");
 var value=document.getElementById("search");
+var logout=document.getElementById("logout");
+var cardContainer=document.getElementById("card-container-columns");
+var allMovies=document.getElementById("showAll");
+var movies3=document.getElementById("show3")
+var c=3;
+var long=false;
 
 
 
-
-const getList=(array)=>{
-
-
-
-
-        var listNode=document.getElementById("list");
-
-    listNode.innerHTML=''
-    if(array=>1){
-        for(x=0;x<=10;x++){
-            var liNode=document.createElement("LI");
-            if(array[x].title==undefined){
-                var title=document.createTextNode(array[x].name);
-            }else{
-                var title=document.createTextNode(array[x].title);
-            
-            }
-            
-            liNode.onclick=function(){alert("hola mundo");};
-            liNode.appendChild(title);
-            listNode.appendChild(liNode);
-            
+const showInColums=()=>{
     
-        }
-    }
+    cardContainer.style.gridTemplateColumns ="auto auto auto";
+    long=false;
+    showMostPopular(c,long);
 
-
-}
-   
-      
-  
-   
-
-const removeList=()=>{
-    var listNode=document.getElementById("list");
-   
-    while (listNode.firstChild) {
-       listNode.removeChild(listNode.firstChild);
-    }
 }
 
 
-
-
-
-
-
-const getMovieList =async()=>{
-
-    var title=document.getElementById("search").value
-  
-    const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': '8f5c9e43f6mshf5f2719ae40093cp177378jsnc6326b4dacc5',
-            'X-RapidAPI-Host': 'imdb8.p.rapidapi.com'
-        }
-    };
+const showInRows=()=>{
     
-    await fetch(`https://imdb8.p.rapidapi.com/title/find?q=${title}`, options)
-        .then(response => response.json())
-        .then(response =>getList(response.results))
-        .catch(err => (removeList()));
+    let card=document.getElementById("card");
+    long=true;
+    cardContainer.style.gridTemplateColumns ="auto";
+    
 
+    showMostPopular(c,long);
+  
 
-   
-
+ 
 }
 
+  
+value.addEventListener("keyup",getMovieList );
+logout.addEventListener("click",logOut);
 
-  
-value.addEventListener("keyup",getMovieList )
-  
+columns.addEventListener("click",showInColums);
+rows.addEventListener("click",showInRows);
+
+
+
+
+/// buttons the show all or 3 popular movies//////////////
+
+allMovies.addEventListener("click",function(){
+    c=20; 
+    showMostPopular(c,long);
+     allMovies.style.display="none";
+    movies3.style.display="grid";} );
+
+movies3.addEventListener("click",function(){
+        c=3;
+        showMostPopular(c,long);
+        movies3.style.display="none";
+       allMovies.style.display="grid";} );
+   
+
       

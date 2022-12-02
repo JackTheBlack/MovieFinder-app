@@ -11,48 +11,71 @@
     </head>
     <header>
      
-       <nav>
-        <span>MOVIEfinder</span>
-        <input id="search" name="search"   placeholder="Search movies..." type="text" ><br>
+       <nav id="nav">
+        <div class="nav-grid">
+           <div>
+           <img src="./images/movieFinderIndex.png"/>
+           </div> 
+           <div>
+            <input id="search" name="search"   placeholder="Search movies..." type="text" ><br>
+           </div>
+           
+            <div id="logPin" class="log">
+                <div>
+                    <span id="logout" >LOG OUT</span>
+                </div>
+               <div>
+                  <img src="./images/userPin.png" >
+               </div>
+            </div>      
+            
+
+        </div>
+       
+    
    
+    
+      
+    
+
      </nav>
     
     </header>
     <body>
         <div id="list" class="result-list">
-
-      
-       
-
-       
         </div>        
-            <div class="banner">
+
+
+            <div id="banner" class="banner">
               <div class="banner-shadow">
-        <div class="banner-content">
+                <div  class="banner-content">
 
               <div class="content" >
-                        <div class="content gender">
-                            <span>Science Fiction</span> 
-                </div>
+                        <div id="genre" class="content gender">
+                            <span></span> 
+                   </div>
 
 
-                    <div class="content stars">
-                    <img src="images/union.png"/>
+                    <div class="star-container">
+                    --><label for="radio1">★</label><!--
+                    --><label for="radio2">★</label><!--
+                    --><label for="radio3">★</label><!--
+                    --><label for="radio4">★</label><!--
+                    --><label for="radio5">★</label>
+                    
                     </div>
 
 
                     
-                    <div class="content title">
-                    <span> Avatar 2</span>
+                    <div  id="title" class="content title">
+                    <span id="title" ></span>
                     </div>
 
-                    <div class="content description">
-                        Set more than a decade after the events of the first film, Avatar: The Way of  Water begins to tell the story of the Sully family, the trouble that follows them,
-                        the lengths they go to keep each other safe, the battles they fight to stay alive, 
-                        and the tragedies they endure.
+                    <div id="overview" class="overview">
+                      
                     </div>
 
-                    <div  class="content watch">
+                    <div id class="content watch">
                             <button class="watch-button">Watch now </button> 
                     </div>
                     
@@ -62,31 +85,41 @@
     </div>
     </div>
 
-    <div class="most-watched">
-        Most Watched
+    <div class="most-watched-grid">
+        <div class="most-watched-grid item1">
+            Most Watched
+        </div>  
+     
+        <div class="most-watched-grid item2">
+           <div  alt="columns" id="columns">
+                <img src="./images/rectangle34.png" alt="columns">
+                <img src="./images/rectangle34.png" alt="columns">
+                <img src="./images/rectangle34.png" alt="columns">
+           </div>
+           <div  id="rows"alt="rows">
+                <img src="./images/rectangle30.png" alt="rows">
+            </div>
+
+        </div>  
+
+      
+   
     </div>
+          
+   
 
-
-    <div class="cards-container">
+    <button id="showAll"class="list-button" >+</button>
+    <button id="show3"class="list-button" style="display:none" >-</button>
+    <div id="card-container-columns" class="card-container-columns">
        
+          
 
 
-        <div class="card prey">
-              
-
-        </div>
-
-        <div class="card dominion">
-
-        </div>
-
-        <div class="card godzillakingkong">
-
-        </div>
-
-
-
+   
     </div>
-    <script src="index.js"></script>
+  
+    
+        <script  type="module" src="index.js"></script>
+      
     </body>
 </html>

@@ -1,13 +1,18 @@
 
-import {loginSuccess} from"./functions/loginResults.js";
+import {loginSuccess, loginSuccessRemember} from"./functions/loginResults.js";
+import {emailValidate} from "./functions/validation.js";
+
+
+
 var btn=document.getElementById("login-btn");
 var modal=document.getElementById("myModal");
-var errorPassword=document.getElementById("error-password");
-var errorEmail=document.getElementById("error-email");
-var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
 var email=document.getElementById("email");
-var password=document.getElementById("password");
+
 var eye=document.getElementById("eye");
+
+
+var rememberMe=document.getElementById("rememberMe");
 
 
 const login =async(email,password)=>{
@@ -23,65 +28,36 @@ const login =async(email,password)=>{
         method: 'POST',
         body: encodedParams
     };
+    if (rememberMe.checked){
 
-    await fetch(`http://localhost:3000/login`, options)
-    .then(response => response.json())
-    .then(response =>loginSuccess(response.accessToken))
-    .catch(err => console.log(err));
-
-
-
-
-}
-
-
-
-const emailValidate=(email)=>{
-    if(email.match(mailformat))
-    {
-
- 
-   passwordValidate(password.value);
-    return true;
-    }
-    else
-    {
-    this.email.style.border="3px solid rgb(232, 11, 11)";    
-    errorPassword.style.display="none";
-    errorEmail.style.display="block";
-   
-    alert("You have entered an invalid email address!");
-  
-    return false;
-    }
-}
-
-
-const passwordValidate=(pass)=>{
+        await fetch(`http://localhost:3000/login`, options)
+        .then(response => response.json())
+        .then(response =>loginSuccessRemember(response.accessToken))
+        .catch(err => console.log(err));
     
-    let length=pass.length;
-    console.log(length);
-    if(length>=1)
-    {
 
-   login(email.value,pass);
+    }else{
+
+        console.log(rememberMe.checked);
+        await fetch(`http://localhost:3000/login`, options)
+        .then(response => response.json())
+        .then(response =>loginSuccess(response.accessToken))
+        .catch(err => console.log(err));
+    
+    }
    
-    return true;
-    }
-    else
-    {
-    this.password.style.border="3px solid rgb(232, 11, 11)";    
-    errorEmail.style.display="none";
-    errorPassword.style.display="block";
-    alert("You forgot to introduce your password");
-  
-    return false;
-    }
+
+
+
 }
+
+
+
 
 
 
 btn.onclick=function(){
+ console.log("fdfdfd")
     emailValidate(email.value);
  
 }
