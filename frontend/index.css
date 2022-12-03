@@ -310,9 +310,10 @@ background:  #66a4c1;;
 .card-content{
     
   display:grid;
-  margin-top: 75%;
+  margin-top: 92%;
+  height: 70%;
   grid-template-columns: auto;
-  grid-template-rows:20% 20% ;
+  grid-template-rows:60px 10px 20%  ;
   
 
 height: 330px;
@@ -323,7 +324,6 @@ height: 330px;
 
 .card-overview{
     display:relative;
-padding: 10px;
 font-weight: 220;
 font-size: 10px;
 
@@ -336,7 +336,6 @@ font-size: 10px;
   position: relative;
     font-weight: 700;
     font-size: 20px;
-   padding-bottom: 50px;
     /* or 320% */
 
 
@@ -403,12 +402,6 @@ z-index:1;
   }
 
 
-  #form {
-    width: 250px;
-    margin: 0 auto;
-    height: 50px;
-  }
-  
   #form p {
     text-align: center;
   }

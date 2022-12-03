@@ -1,6 +1,6 @@
 import { movieGenre } from "./genres.js";
 import {createCard} from "./card.js";
-
+import {getStars} from "./stars.js"
 
 let divContainer=document.getElementById("card-container-columns");
 
@@ -74,6 +74,7 @@ const theMostPopular=(mp)=>{
     banner.style.backgroundImage=`url(${posterPath+mp.backdrop_path})  `;
     let title=document.getElementById("title");
     title.innerText=mp.title;
+    getStars("starContainer",mp.vote_average);
     overview.innerText=mp.overview;
     let gendres= movieGenre(mp.genre_ids);
     let gendre=document.getElementById("genre");
