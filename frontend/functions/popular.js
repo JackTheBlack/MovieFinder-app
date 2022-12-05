@@ -3,7 +3,7 @@ import {createCard} from "./card.js";
 import {getStars} from "./stars.js"
 
 let divContainer=document.getElementById("card-container-columns");
-
+let watchButton=document.getElementById("watchButton");
 const getMostPopular=async()=>{
   
     const options = {
@@ -79,8 +79,7 @@ const theMostPopular=(mp)=>{
     let gendres= movieGenre(mp.genre_ids);
     let gendre=document.getElementById("genre");
     gendre.innerText=gendres[0];
-    
-
+    sessionStorage.setItem("bannerId",JSON.stringify(mp.id))
 }
 
 

@@ -3,7 +3,7 @@ import {getGenres} from "./functions/genres.js";
 //import {checkLogin} from "./functions/checkLog.js";
 import {logOut} from "./functions/logOut.js";
 import {getList,getMovieList} from "./functions/search.js"
-
+import {bringMovie} from "./functions/modal.js";
 //checkLogin()
 
 
@@ -40,10 +40,7 @@ const showInRows=()=>{
     
 
     showMostPopular(c,long);
-  
-
- 
-}
+  }
 
   
 value.addEventListener("keyup",getMovieList );
@@ -51,14 +48,16 @@ logout.addEventListener("click",logOut);
 
 columns.addEventListener("click",showInColums);
 rows.addEventListener("click",showInRows);
+
+
 watchButton.addEventListener("click",function(){
-
-  
-
+    let id=sessionStorage.getItem("bannerId");
+    bringMovie(id);
 
     elementoDialog.showModal();
  
 }, false);
+
 
 closeModal.addEventListener("click",function(){
     elementoDialog.close();

@@ -1,6 +1,6 @@
 
 
-var dialog=document.getElementById("modalContent");
+var dialog=document.getElementById("modalBanner");
 var modalBanner=document.createElement("img");
 
 
@@ -21,22 +21,29 @@ const bringMovie=async(id)=>{
 
 }
 
+const modalBannerContent=(movie)=>{
+
+  let title=document.getElementById("modalTitle");
+  let button=document.getElementById("modalButton")
+title.innerText=movie.title;
+ 
+
+
+}
+
 
 const fillModal=(movie)=>{
   let  cardPath="http://image.tmdb.org/t/p/w1280/";
-    console.log("estoy aqui")
-    modalBanner.src=`${cardPath+movie.backdrop_path}`; 
 
-    modalBanner.style.position="absolute"
-    modalBanner.style.left="0%"
-    modalBanner.style.top="0%"
-    modalBanner.style.width="1240px"
-    modalBanner.style.height="440px"
+ let overview=document.getElementById("modalOverview");
  //   modalBanner.style.backgroundRepeat ="no-repeat";
    // dialog.appendChild(modalBanner);
 dialog.style.background= ` linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%), url(${cardPath+movie.backdrop_path})`; 
-dialog.style.backgroundPosition="100% 40%";
+dialog.style.backgroundPosition="100% 25%";
 dialog.style.backgroundSize="cover";
+modalBannerContent(movie);
+overview.innerText=movie.status;
+
 }
 
 export {bringMovie}
