@@ -7,7 +7,6 @@
         <link rel="stylesheet" href="index.css">
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
-  
     </head>
     <header>
      
@@ -42,6 +41,12 @@
     
     </header>
     <body>
+
+
+
+   
+
+
         <div id="list" class="result-list">
         </div>        
 
@@ -71,8 +76,8 @@
                       
                     </div>
 
-                    <div id class="content watch">
-                            <button class="watch-button">Watch now </button> 
+                    <div class="content watch">
+                            <button id="watchButton" class="watch-button">Watch now </button> 
                     </div>
                     
               </div>
@@ -114,6 +119,20 @@
    
     </div>
   
+
+      
+                
+    <dialog class="modal" id="dialog">
+        <div id="close" class="close-tab">
+                <img style="position:absolute; transform: rotate(-185deg);" src="./images/cross.png">
+                <img style="position:absolute; transform: rotate(-90deg);" src="./images/cross.png">
+          </div>  
+          <div class="modal-content" id="modalContent">
+
+          </div>
+      </dialog> 
+
+
     
         <script  type="module" src="index.js"></script>
       

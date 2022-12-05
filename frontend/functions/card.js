@@ -1,6 +1,11 @@
 
 import {cutOverview} from "./cutOverview.js";
 import {getStars} from "./stars.js"
+import { bringMovie } from "./modal.js";
+
+    var cardId;
+    var card=document.getElementById("card");
+
 
 const createCard=(element,width,height, cardPath,long)=>{
 
@@ -9,11 +14,11 @@ const createCard=(element,width,height, cardPath,long)=>{
     starsContainer.id="cardStarContainer";
     starsContainer.className="star-container"
   var cardContent=document.createElement("DIV");
-    var card=document.createElement("DIV");
+  var card=document.createElement("DIV");
   var cardShadow=document.createElement("DIV");
     cardShadow.style.width=width;
     cardShadow.style.height=height;
-  
+  cardId=element.id;
   cardShadow.style.background="linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%)";
   cardShadow.className="card-shadow";
 
@@ -36,7 +41,7 @@ const createCard=(element,width,height, cardPath,long)=>{
    card.style.backgroundRepeat ="no-repeat";
    card.className="card";
    card.id="card"; 
-   
+   console.log(card.id+"  "+card.className)
    for(let x=0;x<=element.vote_average/2;x++){
     let star=document.createElement("DIV");
     star.className="star";
@@ -56,11 +61,17 @@ const createCard=(element,width,height, cardPath,long)=>{
    card.appendChild(cardShadow);
 
 
-   
+   card.addEventListener("click",function(){
+   bringMovie(element.id);
+   var dialog=document.getElementById("dialog");
+   dialog.showModal();
+   })
   
 
   return card;
 
 }
+
+
 
 export {createCard}

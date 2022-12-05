@@ -4,13 +4,14 @@ import {getGenres} from "./functions/genres.js";
 import {logOut} from "./functions/logOut.js";
 import {getList,getMovieList} from "./functions/search.js"
 
-
 //checkLogin()
 
 
 getGenres();
 getMostPopular();
-
+var closeModal=document.getElementById("close");
+var elementoDialog = document.getElementById("dialog")
+var watchButton=document.getElementById("watchButton");
 var columns=document.getElementById("columns");
 var rows=document.getElementById("rows");
 var value=document.getElementById("search");
@@ -20,7 +21,6 @@ var allMovies=document.getElementById("showAll");
 var movies3=document.getElementById("show3")
 var c=3;
 var long=false;
-
 
 
 const showInColums=()=>{
@@ -51,6 +51,19 @@ logout.addEventListener("click",logOut);
 
 columns.addEventListener("click",showInColums);
 rows.addEventListener("click",showInRows);
+watchButton.addEventListener("click",function(){
+
+  
+
+
+    elementoDialog.showModal();
+ 
+}, false);
+
+closeModal.addEventListener("click",function(){
+    elementoDialog.close();
+ 
+});
 
 
 
