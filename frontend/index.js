@@ -4,11 +4,13 @@ import {getGenres} from "./functions/genres.js";
 import {logOut} from "./functions/logOut.js";
 import {getList,getMovieList} from "./functions/search.js"
 import {bringMovie} from "./functions/modal.js";
+import { bringTrailer } from "./functions/videos.js";
 //checkLogin()
 
 
 getGenres();
 getMostPopular();
+var modalButton=document.getElementById("modalButton");
 var closeModal=document.getElementById("close");
 var elementoDialog = document.getElementById("dialog")
 var watchButton=document.getElementById("watchButton");
@@ -55,17 +57,26 @@ watchButton.addEventListener("click",function(){
     bringMovie(id);
 
     elementoDialog.showModal();
+    var dialog=document.getElementById("dialog");
+    dialog.style.display="";
+ 
  
 }, false);
 
 
 closeModal.addEventListener("click",function(){
     elementoDialog.close();
+    var dialog=document.getElementById("dialog");
+    dialog.style.display="none";
  
 });
 
 
-
+modalButton.addEventListener("click",function(){
+    let id =sessionStorage.getItem("modalId")
+    let trailerId=bringTrailer(id)
+    console.log(trailerId);
+})
 
 /// buttons the show all or 3 popular movies//////////////
 

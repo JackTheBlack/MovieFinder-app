@@ -3,6 +3,7 @@
     <head>
         <title>Movie Finder</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="modal.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="index.css">
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
@@ -123,18 +124,44 @@
       
                 
     <dialog class="modal" id="dialog">
-        <div id="close" class="close-tab">
-                <img style="position:absolute; transform: rotate(-185deg);" src="./images/cross.png">
-                <img style="position:absolute; transform: rotate(-90deg);" src="./images/cross.png">
-          </div>  
-          <div class="modal-banner" id="modalBanner">
-                  <div class="modal-banner-content">
-                    <button class="action-btn modal-button" id="modalButton">Watch Trailer</button>
-                    <div id="modalTitle" class="title modal-title"></div>
-                  </div>
-                  <span class="overview" id="modalOverview"></span>
+                <div id="close" class="close-tab">
+                        <img style="position:absolute; transform: rotate(-185deg);" src="./images/cross.png">
+                        <img style="position:absolute; transform: rotate(-90deg);" src="./images/cross.png">
+                </div>  
+        
+                <div class="modal-banner" id="modalBanner">
+                    <div class="modal-banner-content">
+                        <button class="action-btn modal-button" id="modalButton">Watch Trailer</button>
+                        <div id="modalTitle" class="title modal-title"></div>
+                    </div>
+
                  
+            
           </div>
+      
+          <span class="overview modal-overview" id="modalOverview"></span>
+
+          <div class="movie-information">
+            <div class="movie-data" id="movieData">
+                    <div>
+                            <label> Release Date: </label>
+                            <p id="date" ></p>
+                            <label>Genre:</label>
+                            <p id="genero" class="gender"></p>
+                    </div>
+                    <div>
+                        <label> Original Language: </label>
+                        <p id="languaje" ></p>
+                        <p>Popularity</p>
+                        <p id="popularity"></p>
+                    </div>
+            </div>
+            <div class="related-movies" id="relatedMovies">
+                    rfrgrtg
+            </div>
+          </div>
+           
+          
       </dialog> 
 
 

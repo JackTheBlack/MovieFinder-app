@@ -65,6 +65,8 @@ const createCard=(element,width,height, cardPath,long)=>{
    bringMovie(element.id);
    var dialog=document.getElementById("dialog");
    dialog.showModal();
+   
+   dialog.style.display="";
    })
   
 
