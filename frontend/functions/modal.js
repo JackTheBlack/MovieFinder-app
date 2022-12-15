@@ -1,5 +1,5 @@
 import { bringVideos } from "./videos.js";
-
+import { getSimilar } from "./similar.js";
 var dialog=document.getElementById("modalBanner");
 var modalBanner=document.createElement("img");
 
@@ -51,7 +51,7 @@ languaje.innerText=movie.spoken_languages[0].english_name;
 
 console.log(movie.genres[0].name);
 modalBannerContent(movie);
-
+getSimilar(movie.id)
 
 
 }
