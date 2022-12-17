@@ -1,3 +1,4 @@
+import {login} from "../login.js" ;
 
 var password=document.getElementById("password");
 var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -40,7 +41,7 @@ const passwordValidate=(pass)=>{
         errorPassword.style.display="block";
         return false;
     }else{
-        if(pass.match(mailformat))
+        if(pass.match(passFormat))
         {
     
         login(email.value,pass);

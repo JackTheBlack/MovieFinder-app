@@ -75,7 +75,7 @@ color: #BCBCBC;
     display: grid;
     grid-template-columns: auto auto;
     
-    position:relative;
+    position:absolute;
     top:2%;
     right:5%;
    
@@ -86,7 +86,7 @@ color: #BCBCBC;
     position: relative;
     font-size: 15px;
     top:15%;
- 
+    padding-right:10px ;
     cursor:pointer;
 }
 
@@ -391,8 +391,8 @@ color: #FFFFFF;
 
 .result-list{
 position:absolute;
-left:33%;
-top:7.68%;
+left:36.5%;
+top:8.78%;
 color:rgb(246, 245, 245);
 font-family: 'Open Sans';
 font-style: normal;
@@ -402,17 +402,19 @@ line-height: 10px;
 width: 418px;
 background-color: #131212;
 z-index:1;
+cursor: pointer;
+
 }
 
 
-.result-list li{
+.result-list div{
     
     list-style:none;
     padding: 8px 12px;
   }
 
 
-  .result-list li:hover{
+  .result-list div:hover{
     background-color: #555555;
     color: white;
     border: 2px solid #555555;
@@ -500,6 +502,5 @@ left: 14%;
  .card-modal-container{
   display:grid;
   grid-template-columns: auto auto auto;
-  padding-left: 15%;
   column-gap: 40px;
  }

@@ -26,7 +26,7 @@
     let cardModalContainer=document.getElementById("cardModalContainer");
   
         cardPath="http://www.themoviedb.org/t/p/w220_and_h330_face/";
-        cardModalContainer.style.paddingLeft="15%";
+      
         width="118px";
         height="118px";
  

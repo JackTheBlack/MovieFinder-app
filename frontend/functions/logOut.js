@@ -1,9 +1,9 @@
 const logOut=()=>{
 
     console.log("logout");
-    window.localStorage.removeItem('user');
-    window.sessionStorage.removeItem('user');
-    window.location = 'http://127.0.0.1:5500/frontend/login.html';
+    window.localStorage.removeItem('sessionToken');
+    window.sessionStorage.removeItem('sessionToken');
+    window.location = 'http://127.0.0.1:5500/login.html';
 }
 
 

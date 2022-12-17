@@ -1,5 +1,8 @@
 import { bringVideos } from "./videos.js";
 import { getSimilar } from "./similar.js";
+import { formatDate } from "./dateFormat.js";
+
+
 var dialog=document.getElementById("modalBanner");
 var modalBanner=document.createElement("img");
 
@@ -39,15 +42,15 @@ const fillModal=(movie)=>{
   let languaje=document.getElementById("languaje");
   let genero=document.getElementById("genero");
  let overview=document.getElementById("modalOverview");
- //   modalBanner.style.backgroundRepeat ="no-repeat";
-   // dialog.appendChild(modalBanner);
+ let popularity=document.getElementById("popularity");
 dialog.style.background= ` linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%), url(${cardPath+movie.backdrop_path})`; 
 dialog.style.backgroundPosition="100% 25%";
 dialog.style.backgroundSize="cover";
 overview.innerText=movie.overview;
-date.innerText=movie.release_date;
+date.innerText=formatDate(movie.release_date);
 genero.innerText=movie.genres[0].name;
 languaje.innerText=movie.spoken_languages[0].english_name;
+popularity.innerText=(movie.vote_average/2)+" / 5";
 
 console.log(movie.genres[0].name);
 modalBannerContent(movie);

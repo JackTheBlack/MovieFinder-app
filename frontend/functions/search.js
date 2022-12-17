@@ -1,6 +1,9 @@
 
-var listNode=document.getElementById("list");
+import { bringMovie } from "./modal.js";
 
+
+var listNode=document.getElementById("list");
+var select=document.getElementById("select");
 
 
 //////////////////  Create the list/////////////////
@@ -12,18 +15,30 @@ const getList=(array)=>{
       
         for(let x=0;x<=10;x++){
             listNode.style.display="block";
-            var liNode=document.createElement("LI");
+            var liNode=document.createElement("div");
+            liNode.className="item-list";
+            var title=document.createElement("span");
+            var option=document.createElement("option")
             if(array[x].title==undefined){
-                var title=document.createTextNode(array[x].name);
+                title.innerText=array[x].name;
+               
             }else{
-                var title=document.createTextNode(array[x].title);
+                title.innerText=array[x].title;           
             
             }
-                 
-            liNode.onclick=function(){alert("hola mundo");};
+            liNode.id=array[x].id
+        
+         
             liNode.appendChild(title);
             listNode.appendChild(liNode);
-            
+            liNode.onclick=function(){
+                console.log(liNode.id)
+                   // bringMovie(element.id);
+                  //var dialog=document.getElementById("dialog");
+                   // dialog.showModal();
+       
+                    // dialog.style.display="";
+                };
     
         }
     }
