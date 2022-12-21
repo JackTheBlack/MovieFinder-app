@@ -21,13 +21,15 @@ var logout=document.getElementById("logout");
 var cardContainer=document.getElementById("card-container-columns");
 var allMovies=document.getElementById("showAll");
 var movies3=document.getElementById("show3")
+let iContainter=document.getElementById("iframeContainer");
 var c=3;
 var long=false;
-
-
+  
 const showInColums=()=>{
+ 
+        cardContainer.style.gridTemplateColumns ="auto auto auto";
     
-    cardContainer.style.gridTemplateColumns ="auto auto auto";
+    
     long=false;
     showMostPopular(c,long);
 
@@ -68,6 +70,7 @@ closeModal.addEventListener("click",function(){
     elementoDialog.close();
     var dialog=document.getElementById("dialog");
     dialog.style.display="none";
+    iContainter.style.display="none";
  
 });
 

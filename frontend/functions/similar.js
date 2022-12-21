@@ -39,7 +39,7 @@
 let createCards= movies.map(function(element,index){
     
    if ((index>0)&&(index<=3)){
-    let card=createModalCard(element,width,height, cardPath,false);
+    let card=createModalCard(element,cardPath,false);
    cardModalContainer.appendChild(card);  
     
    }

@@ -37,7 +37,7 @@ const showMostPopular=(columns,long)=>{
    
     }else{
         cardPath="http://www.themoviedb.org/t/p/w220_and_h330_face/";
-        divContainer.style.paddingLeft="15%";
+       
         width="225px";
         height="310px";
     }

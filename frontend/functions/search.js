@@ -30,15 +30,16 @@ const getList=(array)=>{
               
             }
             cardPath="http://www.themoviedb.org/t/p/w220_and_h330_face/";
-         let card=createModalCard(array[x],"118px","118px", cardPath,false);
-       
-         liNode.id=array[x].id          
+         let card=createModalCard(array[x], cardPath,false);
+            card.id=array[x].id;
+         liNode.id=array[x].id ;         
          liNode.appendChild(card);
             liNode.appendChild(title);
             listNode.appendChild(liNode);
             let allList=listNode.querySelectorAll("div");
            liNode.addEventListener("click",function(){
-            let id=allList[x].id
+            let id=allList[x+2].id
+            console.log("id movie:"+id)
             bringMovie(id);
         
           //  elementoDialog.showModal();

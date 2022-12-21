@@ -15,7 +15,9 @@ const createCard=(element,width,height, cardPath,long)=>{
     starsContainer.className="star-container"
   var cardContent=document.createElement("DIV");
   var card=document.createElement("DIV");
+  card.class="card"
   var cardShadow=document.createElement("DIV");
+  cardShadow.class="card-shadow";
     cardShadow.style.width=width;
     cardShadow.style.height=height;
   cardId=element.id;
@@ -75,7 +77,7 @@ const createCard=(element,width,height, cardPath,long)=>{
 }
 
 
-const createModalCard=(element,width,height, cardPath,long)=>{
+const createModalCard=(element,cardPath,long)=>{
 
 
   var starsContainer=document.createElement("div");
@@ -83,12 +85,11 @@ const createModalCard=(element,width,height, cardPath,long)=>{
     starsContainer.className="star-container"
   var cardContent=document.createElement("DIV");
   var card=document.createElement("DIV");
+  card.class="card-modal";
   cardId=element.id;
 
 
-    card.style.width=width;
-    card.style.height=height;
-
+    
    
    card.style.backgroundImage=`url(${cardPath+element.backdrop_path})`; 
    card.style.backgroundRepeat ="no-repeat";

@@ -25,15 +25,23 @@ const bringTrailer=(id)=>{
     var videos=JSON.parse(sessionStorage.getItem("videosRelated"))
     var trailerId;
     console.log(videos)
+    let iContainter=document.getElementById("iframeContainer");
+ 
     for(let i=0;i<videos.length;i++){
        
             if(videos[i].type=="Trailer"){
             
                 trailerId=videos[i].key
                 i=videos.length;
+                let iframe=document.getElementById("iframe");
+                let iContainter=document.getElementById("iframeContainer");
+
+                iframe.src="https://www.youtube.com/embed/"+trailerId;
+                iContainter.style.display="flex"
             }
 
     }
+   
     return trailerId
 
 }

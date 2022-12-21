@@ -37,6 +37,8 @@ title.innerText=movie.title;
 
 
 const fillModal=(movie)=>{
+  let iContainter=document.getElementById("iframeContainer");
+  iContainter.style.display="none";
   let  cardPath="http://image.tmdb.org/t/p/w1280/";
   let date=document.getElementById("date");
   let languaje=document.getElementById("languaje");
@@ -50,7 +52,8 @@ overview.innerText=movie.overview;
 date.innerText=formatDate(movie.release_date);
 genero.innerText=movie.genres[0].name;
 languaje.innerText=movie.spoken_languages[0].english_name;
-popularity.innerText=(movie.vote_average/2)+" / 5";
+let aux=movie.vote_average/2;
+popularity.innerText=aux.toFixed(2)+" / 5";
 
 console.log(movie.genres[0].name);
 modalBannerContent(movie);
