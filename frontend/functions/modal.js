@@ -8,7 +8,7 @@ var modalBanner=document.createElement("img");
 
 
 const bringMovie=async(id)=>{
-
+console.log("id:"+id)
     const options = {
         method: 'GET'
       

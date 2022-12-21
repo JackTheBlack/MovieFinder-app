@@ -292,7 +292,7 @@ color:white;
 background:  #66a4c1;;
 }
 
-.watch-button:active {
+.action-btn:active {
     background: #FFFFFF;
     color: #2791C2;
 
@@ -392,7 +392,7 @@ color: #FFFFFF;
 .result-list{
 position:absolute;
 left:36.5%;
-top:8.78%;
+top:8.5%;
 color:rgb(246, 245, 245);
 font-family: 'Open Sans';
 font-style: normal;
@@ -404,6 +404,7 @@ background-color: #131212;
 z-index:1;
 cursor: pointer;
 
+
 }
 
 
@@ -411,6 +412,7 @@ cursor: pointer;
     
     list-style:none;
     padding: 8px 12px;
+    
   }
 
 

@@ -1,48 +1,70 @@
 
 import { bringMovie } from "./modal.js";
-
+import { createModalCard } from "./card.js";
 
 var listNode=document.getElementById("list");
-var select=document.getElementById("select");
-
+var dialog=document.getElementById("dialog");
+let cardPath="http://www.themoviedb.org/t/p/w220_and_h330_face/";
 
 //////////////////  Create the list/////////////////
 const getList=(array)=>{
 
 
     listNode.innerHTML=''
+    ///// check if the input got more than 3 words////////////////////
     if(array.length>=3){
       
         for(let x=0;x<=10;x++){
             listNode.style.display="block";
-            var liNode=document.createElement("div");
+          var liNode=document.createElement("div");
+            liNode.style.display="flex"
             liNode.className="item-list";
             var title=document.createElement("span");
-            var option=document.createElement("option")
+            title.style.marginTop="59px";
+            title.style.marginLeft="1%";
             if(array[x].title==undefined){
                 title.innerText=array[x].name;
-               
+            
             }else{
                 title.innerText=array[x].title;           
-            
+              
             }
-            liNode.id=array[x].id
-        
-         
+            cardPath="http://www.themoviedb.org/t/p/w220_and_h330_face/";
+         let card=createModalCard(array[x],"118px","118px", cardPath,false);
+       
+         liNode.id=array[x].id          
+         liNode.appendChild(card);
             liNode.appendChild(title);
             listNode.appendChild(liNode);
-            liNode.onclick=function(){
-                console.log(liNode.id)
-                   // bringMovie(element.id);
-                  //var dialog=document.getElementById("dialog");
-                   // dialog.showModal();
-       
-                    // dialog.style.display="";
-                };
-    
+            let allList=listNode.querySelectorAll("div");
+           liNode.addEventListener("click",function(){
+            let id=allList[x].id
+            bringMovie(id);
+        
+          //  elementoDialog.showModal();
+          
+            dialog.showModal();
+            dialog.style.display="";
+            removeList();
+         
+           })
+
+        
         }
+     
+
+
+       
+       
+        
+    
     }
 
+}
+
+function selected(element){
+    console.log(element)
+    
 }
    
 /////////// brings the posible Titles//////////////////////////////

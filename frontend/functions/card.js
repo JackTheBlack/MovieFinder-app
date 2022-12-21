@@ -75,5 +75,42 @@ const createCard=(element,width,height, cardPath,long)=>{
 }
 
 
+const createModalCard=(element,width,height, cardPath,long)=>{
 
-export {createCard}
+
+  var starsContainer=document.createElement("div");
+    starsContainer.id="cardStarContainer";
+    starsContainer.className="star-container"
+  var cardContent=document.createElement("DIV");
+  var card=document.createElement("DIV");
+  cardId=element.id;
+
+
+    card.style.width=width;
+    card.style.height=height;
+
+   
+   card.style.backgroundImage=`url(${cardPath+element.backdrop_path})`; 
+   card.style.backgroundRepeat ="no-repeat";
+   card.alt=element.title;
+   card.className="card";
+   card.id="card"; 
+  card.style.padding="0%"
+
+  card.style.margin="0%"
+   card.addEventListener("click",function(){
+   bringMovie(element.id);
+   var dialog=document.getElementById("dialog");
+   dialog.showModal();
+   
+   dialog.style.display="";
+   })
+  
+
+  return card;
+
+}
+
+
+
+export {createCard,createModalCard}

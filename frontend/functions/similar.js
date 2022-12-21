@@ -1,4 +1,4 @@
- import { createCard } from "./card.js";
+ import { createModalCard } from "./card.js";
 
  const getSimilar=async(id)=>{
 
@@ -39,7 +39,7 @@
 let createCards= movies.map(function(element,index){
     
    if ((index>0)&&(index<=3)){
-    let card=createCard(element,width,height, cardPath,false);
+    let card=createModalCard(element,width,height, cardPath,false);
    cardModalContainer.appendChild(card);  
     
    }
