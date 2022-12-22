@@ -2,7 +2,7 @@
                                                      MovieFinder-app
 						      	Documentation
 
-<sub>For implementation:</sub>
+<sup>For implementation:</sup>
                    **With the console,on path “movie-finder-app/json-server”, run script “npm start” to run the json server and then with VS code select login.html or index.htlm, right click and left click on “run with live server”
 In case there is no validation token on any storage and try to open index.html you will be redirected to login.html 
 
@@ -13,7 +13,7 @@ In case there is no validation token on any storage and try to open index.html y
 		passWord:	Nicolas666**
 
 
-<sub>Functions:</sub>
+<sup>Functions:</sup>
 
 	_Popular.js:
 			getMostPopular(): brings the 20 most popular movies
