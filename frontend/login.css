@@ -206,8 +206,11 @@ align-items: center;
 padding: 8px 18px;
 gap: 4px;
 
+position: absolute;
 width: 354px;
 height: 47px;
+left: 7px;
+top:30%;
 
 
 background: #2791C2;
@@ -341,6 +344,7 @@ line-height: 32px;
 body{
     background-size: auto;
     background-repeat: no-repeat;
+    background-color: black;
 }
 
 
@@ -395,10 +399,10 @@ top: 56.4%;
 }
 
 .input2{
-position:relative;
+
 width: 486px;
 height: 70px;
-right:6.5%;
+left:7%;
 
 }
 
@@ -406,13 +410,13 @@ right:6.5%;
 
 width: 486px;
 height: 70px;
-left:5%;
+left:10.2%;
 }
 .ellipse2{
    display: flex;
    position: absolute;
     top:36.5%;
-    left: 82.5%;
+    left: 84.5%;
     cursor: pointer;
     background-color: white;
     }
@@ -423,9 +427,13 @@ left:5%;
     }
      
 
-.login-button{
-    width:486px;
 
+
+.login-button{
+    left: 1px;
+    top:30%;
+    width:486px;
+   
 height:70px;
 }
 
@@ -452,6 +460,21 @@ line-height: 32px;
 }
 
 
+.span2{
+    position: absolute;
+    left: 74.8%;
+    
+    top: 34.39%;
+    
+    
+    }
 
+    .remember{
+        left: 11.5%;
+    
+        top: 34.39%;
+    }
+    
+    
 
 }

@@ -18,6 +18,7 @@ const createCard=(element,width,height, cardPath,long)=>{
   card.class="card"
   var cardShadow=document.createElement("DIV");
   cardShadow.class="card-shadow";
+  cardShadow.id="cardShadow";
     cardShadow.style.width=width;
     cardShadow.style.height=height;
   cardId=element.id;
@@ -43,7 +44,7 @@ const createCard=(element,width,height, cardPath,long)=>{
    card.style.backgroundRepeat ="no-repeat";
    card.className="card";
    card.id="card"; 
-   console.log(card.id+"  "+card.className)
+   
    for(let x=0;x<=element.vote_average/2;x++){
     let star=document.createElement("DIV");
     star.className="star";

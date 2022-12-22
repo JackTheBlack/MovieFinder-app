@@ -5,7 +5,7 @@ import {logOut} from "./functions/logOut.js";
 import {getList,getMovieList} from "./functions/search.js"
 import {bringMovie} from "./functions/modal.js";
 import { bringTrailer } from "./functions/videos.js";
-//checkLogin()
+///checkLogin()
 
 
 getGenres();
@@ -21,15 +21,17 @@ var logout=document.getElementById("logout");
 var cardContainer=document.getElementById("card-container-columns");
 var allMovies=document.getElementById("showAll");
 var movies3=document.getElementById("show3")
-let iContainter=document.getElementById("iframeContainer");
+
 var c=3;
 var long=false;
   
+
+
 const showInColums=()=>{
  
         cardContainer.style.gridTemplateColumns ="auto auto auto";
-    
-    
+     
+ 
     long=false;
     showMostPopular(c,long);
 
@@ -37,13 +39,13 @@ const showInColums=()=>{
 
 
 const showInRows=()=>{
-    
+   
     let card=document.getElementById("card");
-    long=true;
+    let long=true;
     cardContainer.style.gridTemplateColumns ="auto";
-    
+   
 
-    showMostPopular(c,long);
+    showMostPopular(c,true);
   }
 
   
@@ -70,7 +72,7 @@ closeModal.addEventListener("click",function(){
     elementoDialog.close();
     var dialog=document.getElementById("dialog");
     dialog.style.display="none";
-    iContainter.style.display="none";
+   
  
 });
 
@@ -78,7 +80,7 @@ closeModal.addEventListener("click",function(){
 modalButton.addEventListener("click",function(){
     let id =sessionStorage.getItem("modalId")
     let trailerId=bringTrailer(id)
-    console.log(trailerId);
+   
 })
 
 /// buttons the show all or 3 popular movies//////////////

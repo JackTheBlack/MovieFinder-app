@@ -8,7 +8,7 @@ var modalBanner=document.createElement("img");
 
 
 const bringMovie=async(id)=>{
-console.log("id:"+id)
+
     const options = {
         method: 'GET'
       
@@ -55,7 +55,7 @@ languaje.innerText=movie.spoken_languages[0].english_name;
 let aux=movie.vote_average/2;
 popularity.innerText=aux.toFixed(2)+" / 5";
 
-console.log(movie.genres[0].name);
+
 modalBannerContent(movie);
 getSimilar(movie.id)
 

@@ -411,6 +411,23 @@ cursor: pointer;
 
 
 }
+.list-button{
+  background-color: #2791C2;
+  border-radius: 50%;
+  color:white;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  text-align: center;
+  font-size: larger;
+}
+.list-button:hover{
+  background-color: #9cd2eb;
+}
+.list-button:active{
+color:#2791C2;
+background-color: white;
+}
 
 
 .result-list div{
@@ -460,7 +477,8 @@ cursor: pointer;
 .modal-banner-content{
   padding-top: 21%;
   display: grid;
-  grid-template-rows: 30% 20%;
+  grid-template-rows: 30% 30%;
+  row-gap:40px ;
 }
 
 
@@ -573,7 +591,7 @@ iframe{
   }
   .card-container-columns{
   
-   
+   grid-template-columns: auto auto auto;
     padding-left: 5%;
   }
   
@@ -617,10 +635,20 @@ top:87%;
  
  @media only screen and (max-width: 640px){
 
+  
+
 nav input{
-  width: 30%;
+  width: 100%;
   height: 46px;
 }
+
+.nav-grid{
+  grid-template-columns: 20% 50% 30%;
+  column-gap: 30px;
+  padding-left: 0%;
+  width:100%;
+}
+
 
 .result-list{
   position:absolute;
@@ -656,8 +684,8 @@ font-size: 24px;
 
 .card-container-columns{
   
-  display: grid;
-  grid-template-columns: auto ;
+  
+  grid-template-columns: auto;
   margin-left: 30%;
 
 }

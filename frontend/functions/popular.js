@@ -68,7 +68,7 @@ let createCards= movies.map(function(element,index){
 const theMostPopular=(mp)=>{
 
     const posterPath="https://image.tmdb.org/t/p/original/";
-    console.log(mp);
+   
     var banner=document.getElementById("banner");
     var overview=document.getElementById("overview");
     banner.style.backgroundImage=`url(${posterPath+mp.backdrop_path})  `;

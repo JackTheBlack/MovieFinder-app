@@ -10,6 +10,7 @@ var modal=document.getElementById("myModal");
 var email=document.getElementById("email");
 
 var eye=document.getElementById("eye");
+var eye2=document.getElementById("eye2");
 
 
 var rememberMe=document.getElementById("rememberMe");
@@ -38,7 +39,7 @@ const login =async(email,password)=>{
 
     }else{
 
-        console.log(rememberMe.checked);
+       
         await fetch(`http://localhost:3000/login`, options)
         .then(response => response.json())
         .then(response =>loginSuccess(response.accessToken))
@@ -57,7 +58,7 @@ const login =async(email,password)=>{
 
 
 btn.onclick=function(){
- console.log("fdfdfd")
+
     emailValidate(email.value);
  
 }
@@ -72,5 +73,18 @@ eye.onclick=function(){
   
    
 }
+
+
+
+eye2.onclick=function(){
+   
+    if(password.type==="password"){
+     password.type="text";
+    }else{
+     password.type="password";
+    }
+   
+    
+ }
 
 export {login}

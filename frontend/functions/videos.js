@@ -24,7 +24,7 @@ const bringTrailer=(id)=>{
 
     var videos=JSON.parse(sessionStorage.getItem("videosRelated"))
     var trailerId;
-    console.log(videos)
+  
     let iContainter=document.getElementById("iframeContainer");
  
     for(let i=0;i<videos.length;i++){

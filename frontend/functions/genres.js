@@ -19,7 +19,7 @@ const movieGenre=(array)=>{
 
     const genresID=JSON.parse(sessionStorage.getItem("genres"))
     let result=[]
-console.log(array)
+
 
     for(let x=0;x<=array.length-1;x++){
         for(let y=0;y<=genresID.length-1;y++){
@@ -29,7 +29,7 @@ console.log(array)
             }
         }
     }
-    console.log(result[0])
+   
 return result;
 
 }
