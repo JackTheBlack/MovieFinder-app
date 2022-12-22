@@ -1,5 +1,5 @@
 # MovieFinder-app
-                                                     <h1> MovieFinder-app</h1>
+                                                     MovieFinder-app
 						      	Documentation
 
 For implementation:
