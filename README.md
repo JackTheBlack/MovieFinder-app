@@ -2,20 +2,20 @@
                                                      MovieFinder-app
 						      	Documentation
 
-**<sub>For implementation:</sub>
-		With the console,on path “movie-finder-app/json-server”, run script “npm start” to run the json server and then with VS code select login.html or index.htlm, right click and left click on “run with live server”
+<sub>For implementation:</sub>
+                   **With the console,on path “movie-finder-app/json-server”, run script “npm start” to run the json server and then with VS code select login.html or index.htlm, right click and left click on “run with live server”
 In case there is no validation token on any storage and try to open index.html you will be redirected to login.html 
 
 
 
-Available Users for Login:
+**Available Users for Login:
 		email: 		nicolas@mail.com
-		passWord:	Nicolas666
+		passWord:	Nicolas666**
 
 
 <sub>Functions:</sub>
 
-	Popular.js:
+	_Popular.js:
 			getMostPopular(): brings the 20 most popular movies
 
 showMostPopular():displays the most popular movies(start from the second most popuLAR)
@@ -45,7 +45,7 @@ checkLog: checks for a userToken at sessionStorage or localStorage. If not found
 
 	genres.js:  brings the movie genres according to a certain array.
 
-	curOverview.js:  cuts the overview on the movie cards.
+	curOverview.js:  cuts the overview on the movie cards._
 
 	Google doc:
 
