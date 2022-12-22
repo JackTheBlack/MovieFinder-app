@@ -18,9 +18,11 @@ In case there is no validation token on any storage and try to open index.html y
 	_Popular.js:
 			getMostPopular(): brings the 20 most popular movies
 
-showMostPopular():displays the most popular movies(start from the second most popuLAR)
+showMostPopular():
+			displays the most popular movies(start from the second most popuLAR)
 
-theMostPopular():display the most popular movies on the main banner;
+theMostPopular():
+			display the most popular movies on the main banner;
 
 	card.js;
 			createCard() & createModalCard: create movie cards
