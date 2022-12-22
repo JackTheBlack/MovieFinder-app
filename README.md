@@ -1,6 +1,6 @@
 # MovieFinder-app
-                                                      Movie Finder App
-				                         	Documentation
+                                                      MovieFinder-app
+						      	Documentation
 
 For implementation:
 		With the console,on path “movie-finder-app/json-server”, run script “npm start” to run the json server and then with VS code select login.html or index.htlm, right click and left click on “run with live server”
