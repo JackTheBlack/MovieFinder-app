@@ -20,8 +20,9 @@ const getList=(array)=>{
             liNode.style.display="flex"
             liNode.className="item-list";
             var title=document.createElement("span");
-            title.style.marginTop="59px";
-            title.style.marginLeft="1%";
+            title.style.marginTop="30px";
+            title.style.fontSize="14px";
+            title.style.marginLeft="2%";
             if(array[x].title==undefined){
                 title.innerText=array[x].name;
             

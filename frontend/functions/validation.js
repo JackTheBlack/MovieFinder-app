@@ -5,10 +5,11 @@ var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 var passFormat=/^([a-zA-Z0-9_-]){8,20}$/;
 var errorPassword=document.getElementById("error-password");
 var errorEmail=document.getElementById("error-email");
+var errorResponse=document.getElementById("error-response");
 var email=document.getElementById("email");
 
-const emailValidate=(email)=>{
-    if(email.match(mailformat))
+const emailValidate=(mail)=>{
+    if(mail.match(mailformat))
     {
 
  
@@ -17,11 +18,11 @@ const emailValidate=(email)=>{
     }
     else
     {
-    this.email.style.border="3px solid rgb(232, 11, 11)";    
+    email.style.border="3px solid rgb(232, 11, 11)";    
     errorPassword.style.display="none";
     errorEmail.style.display="block";
-   
-    alert("You have entered an invalid email address!");
+    errorResponse.style.display="none";
+
   
     return false;
     }
@@ -53,8 +54,8 @@ const passwordValidate=(pass)=>{
         password.style.border="3px solid rgb(232, 11, 11)";    
         errorEmail.style.display="none";
         errorPassword.style.display="block";
-       
-        alert("The mail format is wriong");
+        errorResponse.style.display="none";
+      
         return false;
         }
 
@@ -62,7 +63,15 @@ const passwordValidate=(pass)=>{
    
 }
 
+const responseValidation=(token)=>{
+    if (token===undefined){
+            errorResponse.style.display="block";
+            errorResponse.style.paddingLeft="20%";
+            errorPassword.style.display="none";
+            errorEmail.style.display="none";
+    }
+
+}
 
 
-
-export {emailValidate}
+export {emailValidate,responseValidation}

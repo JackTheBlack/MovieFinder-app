@@ -6,7 +6,7 @@ import {getList,getMovieList} from "./functions/search.js"
 import {bringMovie} from "./functions/modal.js";
 import { bringTrailer } from "./functions/videos.js";
 
-///checkLogin()
+checkLogin()
 
 
 getGenres();
