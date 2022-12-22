@@ -5,6 +5,7 @@ import {logOut} from "./functions/logOut.js";
 import {getList,getMovieList} from "./functions/search.js"
 import {bringMovie} from "./functions/modal.js";
 import { bringTrailer } from "./functions/videos.js";
+
 ///checkLogin()
 
 
@@ -21,7 +22,8 @@ var logout=document.getElementById("logout");
 var cardContainer=document.getElementById("card-container-columns");
 var allMovies=document.getElementById("showAll");
 var movies3=document.getElementById("show3")
-
+var iframe=document.getElementById("iframe");
+var closeFrame=document.getElementById("closeFrame");
 var c=3;
 var long=false;
   
@@ -67,20 +69,31 @@ watchButton.addEventListener("click",function(){
  
 }, false);
 
-
+////////////// Close modal/////////////
 closeModal.addEventListener("click",function(){
     elementoDialog.close();
     var dialog=document.getElementById("dialog");
+    iframe.style.display="none";
+    iframe.src=iframe.src;
     dialog.style.display="none";
-   
+  
  
 });
+
+closeFrame.addEventListener("click",function(){
+   iframe.src=iframe.src;
+   iframe.style.display="none";
+  
+ closeFrame.style.display="none";
+});
+
 
 
 modalButton.addEventListener("click",function(){
     let id =sessionStorage.getItem("modalId")
     let trailerId=bringTrailer(id)
-   
+    closeFrame.style.display="flex";
+    iframe.style.display="flex";
 })
 
 /// buttons the show all or 3 popular movies//////////////

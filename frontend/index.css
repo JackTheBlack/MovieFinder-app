@@ -498,6 +498,13 @@ background-color: white;
 }
 
 
+.close-frame{
+
+  left:95%;
+
+}
+
+
 .close-tab:hover{
   background: linear-gradient(180deg, rgba(215, 21, 21, 0) 0%, #f00d0d 100%);
 }
