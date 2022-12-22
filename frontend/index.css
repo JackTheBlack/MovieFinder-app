@@ -460,7 +460,7 @@ cursor: pointer;
 .modal-banner-content{
   padding-top: 21%;
   display: grid;
-  grid-template-rows: 60% 20%;
+  grid-template-rows: 30% 20%;
 }
 
 
@@ -493,7 +493,7 @@ cursor: pointer;
   position: absolute;
   color: #f8f6f6;
   width: 95%;
-  top:60%
+  top:65%
 }
 
 .movie-information{
@@ -708,6 +708,11 @@ iframe{
   
   left:2.5%;
   top:30%;
+  
+}
+
+.modal-banner-content{
+  padding-top:10%;
   
 }
 
