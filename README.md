@@ -9,8 +9,9 @@ In case there is no validation token on any storage and try to open index.html y
 
 
 **Available Users for Login:
-		email: 		nicolas@mail.com
-		passWord:	Nicolas666**
+
+			email: 		nicolas@mail.com
+			passWord:	Nicolas666**
 **
 
 <sup>Functions:</sup>
