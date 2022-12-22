@@ -2,7 +2,7 @@
                                                      MovieFinder-app
 						      	Documentation
 
-For implementation:
+**<sub>For implementation:</sub>
 		With the console,on path “movie-finder-app/json-server”, run script “npm start” to run the json server and then with VS code select login.html or index.htlm, right click and left click on “run with live server”
 In case there is no validation token on any storage and try to open index.html you will be redirected to login.html 
 
@@ -13,7 +13,7 @@ Available Users for Login:
 		passWord:	Nicolas666
 
 
-Functions:
+<sub>Functions:</sub>
 
 	Popular.js:
 			getMostPopular(): brings the 20 most popular movies
@@ -39,7 +39,7 @@ checkLog: checks for a userToken at sessionStorage or localStorage. If not found
 
 	dateFormat.js:  change format dd/mm/yyyy to “dd  month, yy”
 
-	validation.js : validates login inputs
+	validation.js : validates login inputs**
 
 	modal.js:  fills the modal context 
 
