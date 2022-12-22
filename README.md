@@ -2,8 +2,8 @@
                                                      MovieFinder-app
 						      	Documentation
 
-<sup>For implementation:</sup>
-                   **With the console,on path “movie-finder-app/json-server”, run script “npm start” to run the json server and then with VS code select login.html or index.htlm, right click and left click on “run with live server”
+For implementation:
+               **    **With the console,on path “movie-finder-app/json-server”, run script “npm start” to run the json server and then with VS code select login.html or index.htlm, right click and left click on “run with live server”
 In case there is no validation token on any storage and try to open index.html you will be redirected to login.html 
 
 
@@ -11,7 +11,7 @@ In case there is no validation token on any storage and try to open index.html y
 **Available Users for Login:
 		email: 		nicolas@mail.com
 		passWord:	Nicolas666**
-
+**
 
 <sup>Functions:</sup>
 
