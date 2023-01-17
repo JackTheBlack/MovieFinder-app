@@ -48,7 +48,7 @@ nav input{
 border-radius: 5px;
 height: 41.97px;
 width: 384px;
-background: url(images/loop.png) no-repeat 7px ;
+background: url(../images/loop.png) no-repeat 7px ;
 
 padding-left:30px;
 background-color: #f8f6f6;
@@ -470,6 +470,7 @@ background-color: white;
 .card-modal{
   width: 98px;
   height: 98px;
+  cursor: pointer;
 }
 
 .modal-banner-content{

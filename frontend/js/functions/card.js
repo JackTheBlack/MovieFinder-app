@@ -98,7 +98,8 @@ const createModalCard=(element,cardPath,long)=>{
    card.className="card";
    card.id="card"; 
   card.style.padding="0%"
-
+card.alt=element.title;
+card.name=element.title;
   card.style.margin="0%"
    card.addEventListener("click",function(){
    bringMovie(element.id);
