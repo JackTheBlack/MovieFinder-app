@@ -5,7 +5,7 @@ const loginSuccessRemember=(token)=>{
         responseValidation(token);
     }else{
         localStorage.setItem('sessionToken', token);
-        window.location = 'http://127.0.0.1:5500/frontend/index.html';
+        window.location = 'http://127.0.0.1:5500/frontend/pages/index.html';
     
     }
    
@@ -16,7 +16,7 @@ const loginSuccess=(token)=>{
     responseValidation(token)
     }else{
         sessionStorage.setItem('sessionToken', token);
-        window.location = 'http://127.0.0.1:5500/frontend/index.html';
+        window.location = 'http://127.0.0.1:5500/frontend/pages/index.html';
     
     }
    
